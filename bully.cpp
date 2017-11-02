@@ -25,10 +25,10 @@ int bully(int pid){
 }
 
 int main(){
-	cout<<"\n enter the number of processes ";
+	cout<<"\n Enter the number of processes ";
 	cin>>n;
 	for(int i=0;i<n;i++){
-		cout<<"\n enter the priority of process "<<i<<" : ";
+		cout<<"\n Enter the priority of process "<<i<<" : ";
 		cin>>pd[i].p;
 		pd[i].st=1;
 		pd[i].pid=i;
@@ -43,12 +43,12 @@ int main(){
 		cout<<"\n 1. Activate ";
 		cout<<"\n 2. Crash ";
 		cout<<"\n 3. Start Election ";
-		cout<<"\n 4. Exit ";
+		cout<<"\n 4. Exit \n";
 
 		cin>>choice;
 		switch(choice){
 		case '1':
-		cout<<"\n enter the process id ";
+		cout<<"\n Enter the process id ";
 		cin>>pid;
 		for(int i=0;i<n;i++){
 			if(pd[i].pid == pid)
@@ -56,7 +56,7 @@ int main(){
 		}
 		break;
 		case '2':
-		cout<<"\n enter the process id ";
+		cout<<"\n Enter the process id ";
 		cin>>pid;
 		for(int i=0;i<n;i++){
 			if(pd[i].pid == pid)
@@ -64,10 +64,10 @@ int main(){
 		}
 		break;
 		case '3':
-		cout<<"\n enter the process id ";
+		cout<<"\n Enter the process id ";
 		cin>>pid;
 		leader = bully(pid);
-		cout<<"\n coordinator--> : "<<leader;
+		cout<<"\n Coordinator--> : "<<leader << endl;
 		break;
 
 	}
